@@ -8,20 +8,6 @@ A modern React-based task manager app with filtering, sorting, drag-and-drop reo
 
 ## How React Hooks Are Used
 
-| Hook             | Use Case 1                        | Use Case 2                        | Example Code                                      |
-|------------------|-----------------------------------|------------------------------------|---------------------------------------------------|
-| `useState`       | Store task list                   | Toggle task completion             | `const [tasks, setTasks] = useState([]);`         |
-| `useEffect`      | Sync tasks to localStorage        | Load tasks on mount                | `useEffect(() => { localStorage.setItem(...); }, [tasks]);` |
-| `useReducer`     | Manage task list                  | Handle timer logic                 | `const [tasks, dispatch] = useReducer(reducer, []);` |
-| `useRef`         | Focus input                       | Track timer interval ID            | `const inputRef = useRef();`                      |
-| `useContext`     | Theme context                     | Task stats context                 | `const { theme } = useContext(ThemeContext);`      |
-| `useMemo`        | Memoize filtered tasks            | Memoize completion stats           | `const filteredTasks = useMemo(() => ..., [tasks]);` |
-| `useCallback`    | Add/remove tasks                  | Control timer                      | `const handleAdd = useCallback(() => {...}, []);`  |
-| `useLayoutEffect`| Scroll to latest task             | Layout adjustment                  | `useLayoutEffect(() => { ... }, [tasks.length]);`  |
-| **Custom Hook**  | `useLocalStorage`                 | `usePomodoroTimer`                 | `const [tasks, setTasks] = useLocalStorage(...);`  |
-
-### Brief Explanation & Example Code
-
 - **useState:**  
   Used for managing simple state like the task list, filter, sort, and theme.  
   ```js
@@ -152,9 +138,11 @@ A modern React-based task manager app with filtering, sorting, drag-and-drop reo
   </DragDropContext>
   ```
 - **Responsive Layout:**  
-.partitions { display: flex; gap: 32px; }
-@media (max-width: 900px) {
+  ```js
+  .partitions { display: flex; gap: 32px; }
+      @media (max-width: 900px) {
   .partitions { flex-direction: column; gap: 16px; }
-}
+  }
+```
 
 
