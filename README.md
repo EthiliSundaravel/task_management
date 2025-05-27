@@ -101,7 +101,7 @@ A modern React-based task manager app with filtering, sorting, drag-and-drop reo
     ```
 ---
 
-## IV. BONUS FEATURES (OPTIONAL - 0.5 POINT EACH)
+## BONUS FEATURES (OPTIONAL - 0.5 POINT EACH)
 
 - **Light/Dark Theme Toggle:**  
   Toggle between light and dark themes using a button in the header.  
